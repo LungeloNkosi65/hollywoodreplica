@@ -1,0 +1,25 @@
+.betButton{
+    border-radius: 0px!important;
+    background-color: #643e94!important;
+    border-color:#643e94!important ;
+}
+.betButton:hover{
+    background-image: linear-gradient(to bottom, rgba(10,10,10), rgba(255,255,255,.5) 69%, rgba(10,10,10) 51%, rgba(10,10,10));
+    background-repeat: repeat-x;
+}
+.card{
+    font-size: smaller;
+ 
+}
+.card-body{
+    
+    margin-top: 4px;
+}
+.colm{
+    margin-right: 110rem !important;
+
+}
+
+
+
+   

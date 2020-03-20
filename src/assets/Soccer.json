@@ -1,0 +1,46 @@
+[
+    {
+        "id":1,
+        "leugeName":"EPL",
+        "time":"14:00",
+        "awayTeam":"Manchester",
+        "homeTeam":"Liverpool",
+        "homePrice":0.9,
+        "awayPrice":1.5,
+        "draw":101
+     
+    },
+    {
+        "id":2,
+        "leugeName":"EPL",
+        "time":"14:00",
+        "awayTeam":"Manchester",
+        "homeTeam":"Liverpool",
+        "homePrice":0.9,
+        "awayPrice":1.5,
+        "draw":101
+     
+    },
+    {
+        "id":3,
+        "leugeName":"EPL",
+        "time":"14:00",
+        "awayTeam":"Manchester",
+        "homeTeam":"Liverpool",
+        "homePrice":0.9,
+        "awayPrice":1.5,
+        "draw":101
+     
+    },
+    {
+        "id":4,
+        "leugeName":"EPL",
+        "time":"14:00",
+        "awayTeam":"Manchester",
+        "homeTeam":"Liverpool",
+        "homePrice":0.9,
+        "awayPrice":1.5,
+        "draw":101
+     
+    }
+]

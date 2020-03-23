@@ -3,6 +3,8 @@ import {HttpClient} from '@angular/common/http';
 import { Observable } from 'rxjs';
 import {SportsService} from '../sports.service';
 import { Sport } from '../iSports';
+import {CountryService} from '../country.service';
+
 
 @Component({
   selector: 'app-side-nav',
@@ -15,7 +17,7 @@ export class SideNavComponent implements OnInit {
   sportBets: Sport[];
   sport:string;
 
-  constructor(private _sport:SportsService) {
+  constructor(private _sport:SportsService, private _countryService:CountryService) {
     this._sport.getSports().subscribe((data:any)=>{
       console.log(data);
       this.sportBets=data;
@@ -24,5 +26,7 @@ export class SideNavComponent implements OnInit {
    }
   ngOnInit(): void {
   }
-
+  onClick() :void{
+    this._countryService.clicked=true;
+  }
 }

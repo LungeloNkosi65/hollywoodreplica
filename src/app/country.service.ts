@@ -9,7 +9,7 @@ export class CountryService {
 
   countries:Country[];
   private countryUrl='https://localhost:44365/api/countries?id=';
-
+ clicked:boolean=false;
   constructor(private _http:HttpClient) { }
 
   getCountries(id:number):Observable<Country[]>{

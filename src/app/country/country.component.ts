@@ -14,7 +14,6 @@ export class CountryComponent implements OnInit {
 
  countries:Country[];
   constructor(private _countryService:CountryService, private route:ActivatedRoute) {
-    this.getCountries();
    }
 
   getCountries(){
@@ -25,7 +24,19 @@ export class CountryComponent implements OnInit {
       console.log('..... country results', this.countries);
     });
   }
+
+  onClick() :void{
+    this._countryService.clicked=true;
+  }
   ngOnInit(): void {
+  this.getCountries();
+  }
+  ngDoCheck():void{
+    if(this._countryService.clicked){
+      this.getCountries();
+      this._countryService.clicked=false;
+    }
+    
   }
 
 

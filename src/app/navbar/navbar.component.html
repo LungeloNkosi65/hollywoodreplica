@@ -61,15 +61,16 @@
    <div class="container-fluid">
        <div class="row">
           <div class="col-md-9">
-              <a class="thirdrow"><i class="fa fa-home" style="color: #666;"></i></a>
+              <a   routerLink="/dashboard" class="thirdrow"><i class="fa fa-home" style="color: #666;"></i></a>
 
           </div>
           <div class="col-md-1">
+        
             <a class="thirdrow" href="#">Odds |</a>
 
           </div>
           <div class="col-md-2">
-            <p class="thirdrow">{{today | date:'yyyy-MM-dd hh:mm :ss  '}}</p>
+            <p class="thirdrow">{{today | date:'dd MMMM y hh:mm :ss '}}</p>
 
           </div>
        </div>

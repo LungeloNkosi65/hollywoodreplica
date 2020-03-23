@@ -21,7 +21,7 @@
                 <a class="d-flex" href="#" style="background-color: #643e94;">
                     <img src="{{sport.logo}}" width="50" height="50" alt="">
                 </a>
-                <div class="media-body text-nowrap" style="background-color: #2b2b2b;min-height: 50px;">
+                <div class="media-body text-nowrap" style="background-color: #2b2b2b;min-height: 50px;" (click)="onClick()">
                     <a routerLink="/country/{{sport.sportId}}">
                     <h5 class="text-white mt-2" style="text-align: center;">{{sport.name}} </h5>
                     </a>

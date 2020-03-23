@@ -51,11 +51,39 @@
             </table>
         </div>
         <div class="col-md-6 ">
-          <div class="card bg-dark text-white" style="border-radius: 0px !important;">
-            <img class="card-img" src="/assets/img/Sport1_modified.png" alt="">
-
+          <table div class="table-text" style=" max-height: 200px !important; min-width: 100% !important;" >
+            <thead>
+              <tr >
+                <th scope="col">Today's Soccer</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr  style="background-color:  #2b2b2b !important;" >
+                <td>Group By:   <button type="button" name="" id="" class="btn btn-primary" style="background-color: transparent !important;" btn-lg btn-block>Time</button> <button type="button" name="" id="" class="btn btn-primary" style="background-color: transparent !important;" btn-lg btn-block>Country</button></td>
+               
+              </tr>
+              <tr style="background-color: #0a0a0a !important;">
+                <td></td>
+              </tr>
+              <tr style="background-color: #0a0a0a !important;">
+                <td></td>
+              </tr>
+              <div *ngFor="let soccerbet of soccerBets" style="min-width: 100% !important;">
+                <tr style="background-color:  #333333 !important;">
+                  <td>{{soccerbet.time}}    ..........   {{soccerbet.leugeName}}</td>
+                 
+                </tr>
+                <tr >
+                  <div class="btn-group" role="group" aria-label="Basic example" style="min-width: 100% !important; width: 410px !important;">
+                    <button type="button"(click)="addEventToBetSlip(soccerbet,soccerbet.homeTeam,soccerbet.homePrice)" class="btn btn-secondary home" >{{soccerbet.homeTeam}}  {{soccerbet.homePrice}}</button>
+                    <button type="button"(click)="addEventToBetSlip(soccerbet,'Draw',soccerbet.draw)" class="btn btn-secondary draw">Draw {{soccerbet.draw}}</button>
+                    <button type="button"(click)="addEventToBetSlip(soccerbet,soccerbet.awayTeam,soccerbet.awayPrice)" class="btn btn-secondary away">{{soccerbet.awayTeam}}   {{soccerbet.awayPrice}}</button>
+                  </div>
+                </tr>
+              </div>
             
-          </div>
+            </tbody>
+          </table>
 
         </div>
     </div>

@@ -1,5 +1,14 @@
-<div>
-    <ul *ngFor="let country of countries" style="color: white;">
-        <li>{{country.countryName}}</li>
-    </ul>
+
+<div class="container-fluid" >
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8"   style="background-color: #1e1e1e !important; color: white;">
+            <div class="row">
+                <div class="col-md-6" *ngFor="let country of countries">
+                  <p>{{country.countryName}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
 </div>

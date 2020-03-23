@@ -1,20 +1,23 @@
 <div class="row ">
     <div class="col-md-12  mt-2">
         <div class="row rm-2 colm" style="min-width: 100%!important;border-radius: 0px;">
-            <div class="card text-white " style="border-color: transparent; background-color: #2b2b2b; max-height: 300px !important; overflow-y: auto !important; min-width: 100 !important;" >
+            <div class="card text-white " style="border-color: transparent; background-color: #2b2b2b;  min-width: 100 !important;" >
                 <div class="card-header" style="background-color: #643e94;border-radius: 0px;">
                 Bet Slip ({{count}})
                 <ng-template [ngIf]="count>1">
-                    <button type="button" (click)="clearBetslip()" class="btn btn-danger">Clear</button>
+
+                    <button (click)="clearBetslip()" style="background-color: transparent; color: #d9534f; border: none; font-size: 17px; margin-right: auto;">
+                      Clear  <i class="fa fa-times"></i>
+                    </button>
                     </ng-template>
                 </div>
-                <ng-template [ngIf]="count==0"><div>
-                    <p class="card-text"  >
+                <ng-template [ngIf]="count==0"><div  style="justify-content: center !important;" >
+                    <p class="card-text" >
                         <strong>To place a bet: </strong> Choose the sport, tournament and event that you would like to bet on. Then select a market by clicking the odds that you would like to bet on</p>
                    </div></ng-template>
             
-                <div class="card-body"style="min-width: 100% !important;" >
-                  <div class="media " *ngFor="let i of item" style="min-width: 100% !important;">
+                <div class="card-body"style="min-width: 100% !important; max-height: 300px !important; overflow-y: auto !important;" >
+                  <div class="media " *ngFor="let i of item" style="min-width: 100% !important; ">
                       <div class="media-body"style="margin-top: -25px; margin-bottom: 20px;">
                         <div class="row mt-2">
                             <div class="col-md-9 mt-2 ">
@@ -33,7 +36,7 @@
                                 <div class="mt-2">
                                     <p style="font-size: small;">
                                         {{i.punterBetChoice}}
-                                        {{i.event}}
+                                       
                                         {{i.eventType}}
                                         {{i.message}}
                                         
